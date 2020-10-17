@@ -10,7 +10,7 @@
 body {
     font-family: "HeliosRegular";
     font-size: 16px;
-
+    background-color: #FDFCFC;
 }
 
 header {
@@ -31,7 +31,7 @@ header nav {
 }
 header nav img {
     display: block;
-    height: 28px;
+    height: 24px;
 }
 header nav img.envelope {
     margin-right: 16px;
@@ -39,7 +39,7 @@ header nav img.envelope {
 
 section.animation {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
 
     div.background, div.letters, div.collage {
@@ -49,46 +49,55 @@ section.animation {
         top: 0;
         left: 0;
     }
-
-    div.background {
-        background-color:#ffffff;
-        z-index: 1;
-    }
-
+   
     div.letters {
         z-index: 2;
         display: flex;
         overflow: hidden;
         flex-direction: column;
         
-        div.line1, div.line2 {
+        div.line1, div.line2, div.line3, div.line4, div.line5, div.line6 {
             display: flex;
-            
             flex-wrap: nowrap;
             margin-bottom: 28px;
-            // overflow: hidden;
 
             span {
-                width: 100%;
-                min-width: 75vw;
-           
+                display: inline-block;
+                min-width: 100%;
+                max-width: 100%;
             }
         }
-        div.line1 {
+        div.line1, div.line3, div.line5 {
             flex-direction: row;
         }
-        div.line2 {
+        div.line2, div.line4, div.line6 {
             flex-direction: row-reverse;
         }
         div.line2 img {
             transform: translateX(10.5%);
         }
-      
     }
-
+    
     div.collage {
-       background-color: aqua;
+       
+        background-image: url(img/vostok-collage.jpg);
+        background-color:#000000;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        clip-path: circle(8% at 10% 20%);
+        z-index: 1;
+        
     }
 }
 
+.shadow {
+    height: 8%;
+    width: 8%;
+    border-radius: 100%;
+    box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
 

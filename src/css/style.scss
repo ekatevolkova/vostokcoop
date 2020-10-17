@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "HeliosRegular";
+    src: url(fonts/HeliosExt.otf)
+}
+@font-face {
+    font-family: "HeliosBold";
+    src: url(fonts/HeliosExt-Bold.otf)
+}
+
+body {
+    font-family: "HeliosRegular";
+    font-size: 16px;
+
+}
+
+header {
+    height: 80px;
+    padding: 40px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+header h1 span {
+    font-family: HeliosBold;
+}
+header nav {
+    display: flex;
+}
+header nav img {
+    display: block;
+    height: 28px;
+}
+header nav img.envelope {
+    margin-right: 16px;
+}
+
+section.animation {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    div.background, div.letters, div.collage {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    div.background {
+        background-color:#ffffff;
+        z-index: 1;
+    }
+    div.letters {
+        z-index: 2;
+    }
+    div.collage {
+       background-color: aqua;
+    }
+}
+
+

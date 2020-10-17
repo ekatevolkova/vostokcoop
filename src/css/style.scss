@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.075em;
     text-transform: uppercase;
 }
 
@@ -49,13 +49,43 @@ section.animation {
         top: 0;
         left: 0;
     }
+
     div.background {
         background-color:#ffffff;
         z-index: 1;
     }
+
     div.letters {
         z-index: 2;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        
+        div.line1, div.line2 {
+            display: flex;
+            
+            flex-wrap: nowrap;
+            margin-bottom: 28px;
+            // overflow: hidden;
+
+            span {
+                width: 100%;
+                min-width: 75vw;
+           
+            }
+        }
+        div.line1 {
+            flex-direction: row;
+        }
+        div.line2 {
+            flex-direction: row-reverse;
+        }
+        div.line2 img {
+            transform: translateX(10.5%);
+        }
+      
     }
+
     div.collage {
        background-color: aqua;
     }

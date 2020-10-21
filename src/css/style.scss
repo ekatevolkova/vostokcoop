@@ -28,6 +28,7 @@ header h1 span {
 }
 header nav {
     display: flex;
+    align-items: center;
 }
 header nav img {
     display: block;
@@ -35,14 +36,19 @@ header nav img {
 }
 header nav img.envelope {
     margin-right: 16px;
+    height: 16px;
 }
 
 section.animation {
     width: 100%;
     height: 90vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    div.background, div.letters, div.collage {
+    div.letters, div.collage {
         width: 100%;
         height: 100%;
         position: absolute;

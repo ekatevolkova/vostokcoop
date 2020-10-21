@@ -33,11 +33,11 @@ const runScripts = function () {
     
     lines1Timeline
         .set(lines1, {x: 0})
-        .to(lines1, {x: spanWidth * - 1, duration: 60, ease: 'linear'})
+        .to(lines1, {x: spanWidth * - 1, duration: 45, ease: 'linear'})
     
     lines2Timeline
         .set(lines2, {x: 0 })
-        .to(lines2, {x: spanWidth , duration: 60, ease: 'linear'})    
+        .to(lines2, {x: spanWidth , duration: 45, ease: 'linear'})    
     }
 
 

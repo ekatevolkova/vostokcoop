@@ -10,7 +10,7 @@ const letters = document.querySelector('div.letters')
 const spanTag = line1.querySelector('span')
 const spanWidth = spanTag.clientWidth
 
-const cursorClip = document.querySelector('div.collage')
+const cursorClip = document.querySelector('div.clip')
 
 const mq = window.matchMedia("(min-width: 600px) and (prefers-reduced-motion: no-preference)")
 
@@ -19,7 +19,7 @@ const runScripts = function () {
 
     allLines.forEach(line => {
         const span = line.querySelector('span')
-        for (let i = 0; i < 10; i = i + 1) {
+        for (let i = 0; i < 30; i = i + 1) {
             line.appendChild(span.cloneNode(true))
         }
     })
@@ -51,10 +51,10 @@ const runScripts = function () {
         let cursorAimY = 0
 
     const changeCursor = function () {
-        cursorCurrentX = cursorCurrentX + (cursorAimX - cursorCurrentX) * 0.15
-        cursorCurrentY = cursorCurrentY + (cursorAimY - cursorCurrentY) * 0.15
+        cursorCurrentX = cursorCurrentX + (cursorAimX - cursorCurrentX) 
+        cursorCurrentY = cursorCurrentY + (cursorAimY - cursorCurrentY) 
 
-        cursorClip.style.clipPath = `circle(8% at ${cursorCurrentX}px ${cursorCurrentY}px)`
+        // cursorClip.style.clipPath = `inset(0 ${cursorCurrentX}px 0 ${cursorCurrentY}px)`
 
         requestAnimationFrame(changeCursor)
     }

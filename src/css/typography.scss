@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'tesseractdisplay-extralight';
+    src: url('fonts/tesseractdisplayweb-extralight-TRIAL.woff');
+       
+}
+
+@font-face {
+    font-family: "Mabry";
+    src: url(fonts/MabryProLight.otf)
+}
+
+body {
+    font-family: "Mabry";
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 28px;
+    width: 500px;
+    height: auto;
+    text-align: left;
+}
+
+.project h4 {
+    font-size: 18px;
+}
+
+.project h3 {
+    font-family: 'tesseractdisplay-extralight';
+    font-size: 24px;
+}

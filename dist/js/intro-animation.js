@@ -1,3 +1,4 @@
+
 const allLines = document.querySelectorAll('div.line1, div.line3, div.line2, div.line4, div.line5, div.line6')
 const lines1 = document.querySelectorAll('div.line1, div.line3, div.line5')
 const lines2 = document.querySelectorAll('div.line2, div.line4, div.line6')

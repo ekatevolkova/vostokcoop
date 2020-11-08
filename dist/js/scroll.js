@@ -1,23 +1,30 @@
+
 const sections = document.querySelectorAll('section')
-const projects = document.querySelectorAll('div.pr1, div.pr2, div.pr3')
+const projects = document.querySelectorAll('div.intro, div.pr1, div.pr2, div.pr3')
 const header = document.querySelector('header')
-let pxFromTop = window.pageYOffset
-let pxFromBot 
+const headerSpan = document.getElementById('header-span')
+const logo = document.getElementById('logo')
+const animation = document.querySelector('section.animation')
+const gallery = document.getElementById('container')
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-      if (entry.intersectionRatio > 0.1) {
+      if (entry.intersectionRatio > 0.2) {
           entry.target.classList.add('in-view')
+
       } else {
           entry.target.classList.remove('in-view')
       }
   })
 }, {
-      threshold: [0.0, 0.1, 1.0]
+      threshold: [0.0, 0.2, 1.0]
 })
+
+
 
 sections.forEach(section => {
   observer.observe(section)
+
 
 })
 
@@ -25,5 +32,44 @@ projects.forEach(project => {
   observer.observe(project)
 })
 
+
+
+window.onscroll = function headerChanging() {
+  if (gallery.classList.contains("in-view")) {
+    headerSpan.style.display = 'none'
+    logo.style.display = 'flex'
+    
+  } else {
+    headerSpan.style.display = 'flex'
+    logo.style.display = 'none'
+  }
+
+  if (animation.scrollTop > 72) {
+    header.style.display = 'none'
+  }
+}
+
+console.log(window.scrollY)
+// const scroll = document.querySelector('section.scroll')
+// scroll.addEventListener('wheel', function(e) {
+//   const w = window.innerHeight
+//   const offset = scroll.getBoundingClientRect();
+//   const right = offset.width
+//   const leftover = scroll.scrollWidth - scroll.clientWidth - scroll.scrollLeft
+//   const setback = scroll.scrollWidth * 2
+//   if (e.deltaY > 0 & leftover > 150 ) 
+//   {
+//     scroll.scrollLeft += 90
+//   }
+//   else if (e.deltaY < 0 & leftover > 150 ) {
+//     scroll.scrollLeft -= 90
+//   } else
+//   {
+//     scroll.scrollLeft -= setback
+//     scroll.scrollTop -= setback
+//   }
+
+//   console.log(leftover, w)
+// })
 
 

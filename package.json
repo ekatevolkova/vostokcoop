@@ -2,10 +2,11 @@
   "name": "vostokcoop",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.html",
   "dependencies": {
     "@oberon-amsterdam/horizontal": "^1.0.4",
     "browser-sync": "^2.26.12",
+    "gsap": "^3.5.1",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0"
   },
@@ -13,13 +14,16 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "webpack-stream": "^6.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "node_modules/gsap/types/index.d.ts"
+  ],
   "keywords": [],
   "author": "ekaterinavolkova",
   "license": "ISC"
-  
 }

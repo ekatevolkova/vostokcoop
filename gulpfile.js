@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
 var imagemin = require("gulp-imagemin")
+// var webpack = require("webpack-stream")
 
 // css
 var sass = require('gulp-sass');
@@ -20,7 +21,17 @@ gulp.task("images", function () {
 
 gulp.task("js", function () {
     return gulp.src("src/js/*")
-        
+        // .pipe(
+        //     webpack({
+        //         output: {
+        //             filename: "app.js"
+        //         }, 
+        //         mode: 'development',
+        //         optimization: {
+        //           usedExports: true,
+        //         }
+        //     })
+        // )
         .pipe(gulp.dest("dist/js"))
         .pipe(browserSync.stream())
 })
@@ -51,12 +62,12 @@ gulp.task("watch", function () {
     // While "watch"ing files - loads live server with website preview coming from "dist" folder
     browserSync.init({
         server: {
-            baseDir: "dist"
+            baseDir: "./dist"
         }
     })
+
     // If any ".html" file is updated then reruns gulp html task to move files to dist folder and also updates live server
     gulp.watch("src/*.html", gulp.series("html")).on("change", browserSync.reload)
-     // If any ".php" file is updated then reruns gulp html task to move files to dist folder and also updates live server
     // If any "img" file is updated then reruns gulp html task to move files to dist folder and also updates live server
     gulp.watch("src/img/*", gulp.series("images")).on("change", browserSync.reload)
         // If any ".css" file is updated then reruns gulp html task to move files to dist folder and also updates live server

@@ -1,0 +1,115 @@
+
+section.animation {
+    opacity: 0;
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    
+    div.letters, div.clip, div.back-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        
+        left: 0;
+    }
+   
+    div.letters {
+        top: 80px;
+        z-index: 3;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        
+        div.line1, div.line2, div.line3, div.line4, div.line5, div.line6 {
+            display: flex;
+            flex-wrap: nowrap;
+            max-height: 25%;
+            span {
+                display: inline-block;
+                min-width: 58%;
+            
+            }
+            span img {
+                width: 100%;
+            }
+        }
+        div.line1, div.line3, div.line5 {
+            flex-direction: row;
+        }
+        div.line2, div.line4, div.line6 {
+            flex-direction: row-reverse;
+        }
+        div.line2 img {
+            transform: translateX(10.5%);
+        }
+
+        div.line5, div.line6 {
+            display: none;
+        }
+    }
+    div.back-image {
+        background: #FFFFFF;
+        background: url(img/nepal.jpg);
+        filter: blur(4px);
+        
+    }
+
+    div.back-image, div.clip {
+        width: 100%;
+        height: 100%;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+    }
+    div.clip {
+       
+        background-image: url(img/nepal.jpg);
+        clip: rect(0px, 160px, 0px, 60px);
+        // clip-path: inset(0px 10px 0px 25px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        
+    }
+    div.tracingpaper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        z-index: 2;
+        filter: blur(3px);
+        opacity: 0.9;
+
+        div.gray1, div.gray2 {
+            height: 100%;
+
+            background-color: #FBFAFA;
+            background: linear-gradient(0deg, #E5E3E3 0%, #E8E6E6 82.29%, #FBFAFA 97.4%);
+           
+        }
+
+        div.gray1 {
+            width: 65%;
+        }
+        div.gray2 {
+            width: 25%;
+        }
+        div.clear {
+            height: 100%;
+            width: 10%;
+            background: linear-gradient(360deg, #E5E3E3 0%, rgba(229, 227, 227, 0) 11.98%, rgba(232, 230, 230, 0) 87.5%, #FBFAFA 97.4%);
+
+        }
+    }
+    
+}
+
+

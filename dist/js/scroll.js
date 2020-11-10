@@ -9,7 +9,7 @@ const gallery = document.getElementById('container')
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-      if (entry.intersectionRatio > 0.2) {
+      if (entry.intersectionRatio > 0.075) {
           entry.target.classList.add('in-view')
 
       } else {
@@ -17,7 +17,7 @@ const observer = new IntersectionObserver(entries => {
       }
   })
 }, {
-      threshold: [0.0, 0.2, 1.0]
+      threshold: [0.0, 0.075, 1.0]
 })
 
 
@@ -36,12 +36,12 @@ projects.forEach(project => {
 
 window.onscroll = function headerChanging() {
   if (gallery.classList.contains("in-view")) {
-    headerSpan.style.display = 'none'
-    logo.style.display = 'flex'
+    headerSpan.style.opacity = '0'
+    logo.style.opacity = '1'
     
   } else {
-    headerSpan.style.display = 'flex'
-    logo.style.display = 'none'
+    headerSpan.style.opacity = '1'
+    logo.style.opacity = '0'
   }
 
   if (animation.scrollTop > 72) {

@@ -2,13 +2,13 @@
 section.animation {
     opacity: 0;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    animation: fadein 2s 1s both;
 
     
     div.letters, div.clip, div.back-image {
@@ -25,15 +25,15 @@ section.animation {
         display: flex;
         overflow: hidden;
         flex-direction: column;
-        
+        padding: 32px 0;
         div.line1, div.line2, div.line3, div.line4, div.line5, div.line6 {
             display: flex;
             flex-wrap: nowrap;
-            max-height: 25%;
+            max-height: 30%;
             span {
                 display: inline-block;
-                min-width: 58%;
-            
+                min-width: 100vh;
+                
             }
             span img {
                 width: 100%;
@@ -67,17 +67,17 @@ section.animation {
         background-repeat: no-repeat; 
         background-size: cover; 
     }
-    div.clip {
+    // div.clip {
        
-        background-image: url(img/nepal.jpg);
-        clip: rect(0px, 160px, 0px, 60px);
-        // clip-path: inset(0px 10px 0px 25px);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
+    //     background-image: url(img/nepal.jpg);
+    //     clip: rect(0px, 160px, 0px, 60px);
+    //     clip-path: inset(0px 10px 0px 25px);
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 155;
         
-    }
+    // }
     div.tracingpaper {
         width: 100%;
         height: 100%;

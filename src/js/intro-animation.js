@@ -16,7 +16,7 @@ const cursorClip = document.querySelector('div.clip')
 const mq = window.matchMedia("(min-width: 600px) and (prefers-reduced-motion: no-preference)")
 
 const runScripts = function () {
-    if (mq.matches) {
+
 
     allLines.forEach(line => {
         const span = line.querySelector('span')
@@ -39,7 +39,7 @@ const runScripts = function () {
     lines2Timeline
         .set(lines2, {x: 0 })
         .to(lines2, {x: spanWidth , duration: 45, ease: 'linear'})    
-    }
+    
 
 
 

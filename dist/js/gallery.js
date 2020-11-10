@@ -10,7 +10,7 @@ gsap.to(container, {
     trigger: container,
     invalidateOnRefresh: true,
     pin: true,
-    scrub: 1,
+    scrub: 0.5,
     end: () => "+=" + container.offsetWidth
   }
 })

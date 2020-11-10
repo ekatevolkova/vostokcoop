@@ -62,7 +62,7 @@ section {
     top: 0;
     left: 0;
 
-    min-width: 900vw;
+    width: 750vw;
 
     background: linear-gradient(180deg, #E5E3E3 0%, #FFFFFF 21.35%);
     display: flex;
@@ -82,7 +82,26 @@ section {
         z-index: -1;
     }
     
+    .w75, .w100, .w125, .w150 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-top: 48px;
+    }
 
+    .w75 {
+        width: 75vw;
+    }
+    .w100 {
+        width: 100vw;
+    }
+    .w125 {
+        width: 125vw;
+    }
+    .w150 {
+        width: 150vw;
+    }
     .intro {
         padding: 0 200px 0 160px;
         opacity: 0;
@@ -92,11 +111,9 @@ section {
 
     div.project {
         display: flex;
-        margin: 0 120px;
         opacity: 0;
         transition: opacity 0.5s 0.2s;
-        min-width: 75vw;
-
+        
         div.info {
             flex-direction: column;
         }
@@ -105,40 +122,78 @@ section {
     div.pr1 {
         flex-direction: row;
         justify-content: flex-start;
-        min-width: 960px;
+        
+        img {
+            max-width: 500px;
+        }
         div.info {
-            padding: 0 0 0 64px;
-            width: 420px;
+            padding: 0 0 0 48px;
+            max-width: 420px;
         }
     }
     div.pr2 {
-        flex-direction: column;
-        align-self: flex-end;
-        padding-bottom: 80px;
-        min-width: 900px;
-            div.info {
-                padding: 48px 0 0 0;
-            
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        
+        img {
+            max-width: 500px;
+        }
+        div.info {
+            padding: 48px 0 0 0;
+
+            h3 {
+                margin-top: 8px;
             }
+        }
 
     }
     div.pr3 {
-        flex-direction: row;
-        align-items: center;
-        min-width: 50vw;        
+        flex-direction: column-reverse;
+        
+        
+        img {
+            max-height: 400px;
+            padding-left: 120px;
+        }
+
         div.info {
-            padding: 0px 0 0 32px;
+            padding: 0px 0px 32px 0px;
         }
     }
 
     div.pr4 {
+        flex-direction: column;
 
+        img {
+            max-width: 1200px;
+            padding-left: 60px;
+        }
+
+        div.info {
+            padding: 32px 0px 0px 0px;
+        }
     }
     div.pr5 {
+        flex-direction: column-reverse;
 
+        img {
+            max-width: 1200px;
+            padding-left: 60px;
+        }
+
+        div.info {
+            padding: 0px 0px 32px 0px;
+        }
     }
     div.pr6 {
-        
+        flex-direction: row;
+        img {
+            max-width: 500px;
+        }
+        div.info {
+            padding: 0 0 0 48px;
+            max-width: 420px;
+        }
     }
 }
 

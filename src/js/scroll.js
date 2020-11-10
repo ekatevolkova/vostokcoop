@@ -1,6 +1,6 @@
 
 const sections = document.querySelectorAll('section')
-const projects = document.querySelectorAll('div.intro, div.pr1, div.pr2, div.pr3')
+const projects = document.querySelectorAll('div.intro, div.project')
 const header = document.querySelector('header')
 const headerSpan = document.getElementById('header-span')
 const logo = document.getElementById('logo')

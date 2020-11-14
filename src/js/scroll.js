@@ -1,6 +1,7 @@
 
 const sections = document.querySelectorAll('section')
 const projects = document.querySelectorAll('div.intro, div.project')
+const frames = document.querySelectorAll('div.frame')
 const header = document.querySelector('header')
 const headerSpan = document.getElementById('header-span')
 const logo = document.getElementById('logo')
@@ -9,7 +10,7 @@ const gallery = document.getElementById('container')
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-      if (entry.intersectionRatio > 0.075) {
+      if (entry.intersectionRatio > 0.1) {
           entry.target.classList.add('in-view')
 
       } else {
@@ -17,22 +18,26 @@ const observer = new IntersectionObserver(entries => {
       }
   })
 }, {
-      threshold: [0.0, 0.075, 1.0]
+      threshold: [0.0, 0.1, 1.0]
 })
 
 
+
+
+
+// projects.forEach(project => {
+//   observer.observe(project)
+// })
 
 sections.forEach(section => {
   observer.observe(section)
 
-
 })
 
-projects.forEach(project => {
-  observer.observe(project)
+frames.forEach(frame => {
+  observer.observe(frame)
+
 })
-
-
 
 window.onscroll = function headerChanging() {
   if (gallery.classList.contains("in-view")) {

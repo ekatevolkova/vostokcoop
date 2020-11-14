@@ -10,8 +10,19 @@ gsap.to(container, {
     trigger: container,
     invalidateOnRefresh: true,
     pin: true,
-    scrub: 0.5,
+    scrub: 1,
     end: () => "+=" + container.offsetWidth
   }
 })
 
+
+// gsap.utils.toArray('.frame').forEach(frame=> {
+//   ScrollTrigger.create({
+//       trigger: frame,
+//       start: 'left 50%',
+//       // end: 'right center',
+//       markers: true,
+//       toggleClass: 'in-view'
+//   });
+// });
+          

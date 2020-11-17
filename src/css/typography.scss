@@ -19,7 +19,15 @@ body {
    }
 
 }
+footer a {
+  text-decoration: none;
+  font-family: "Mabry";
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  text-align: left;
 
+}
 h2 {
     font-size: 21px;
     width: 500px;
@@ -29,6 +37,18 @@ h2 {
     @include mq($mq-m) {
         font-size: 18px;
       }
+    @include mq($mq-sm) {
+        font-size: 24px;
+        text-align: right;
+    }
+    @include mq($mq-s) {
+      font-size: 21px;
+      text-align: right;
+  }
+    @include mq($mq-xs) {
+      font-size: 18px;
+      text-align: right;
+  }
 }
 
 .project h4 {
@@ -38,7 +58,7 @@ h2 {
         font-size: 14px;
       }
 
-    @include mq($mq-sm) {
+    @include mq($mq-s) {
         font-size: 12px;
       }
 
@@ -50,7 +70,7 @@ h2 {
             font-size: 10px;
           }
 
-        @include mq($mq-sm) {
+        @include mq($mq-s) {
             font-size: 9px;
           }
     }

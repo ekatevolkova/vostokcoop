@@ -3,6 +3,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 let container = document.getElementById("container");
 
+ScrollTrigger.matchMedia({
+
+"(min-width: 900px)": function() {
+
 gsap.to(container, {
   x: () => -(container.scrollWidth - document.documentElement.clientWidth) + "px",
   ease: "none",
@@ -15,7 +19,8 @@ gsap.to(container, {
   }
 })
 
-
+}
+})
 // gsap.utils.toArray('.frame').forEach(frame=> {
 //   ScrollTrigger.create({
 //       trigger: frame,

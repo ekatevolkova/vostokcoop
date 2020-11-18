@@ -41,7 +41,7 @@ body {
 
     @include mq($mq-sm) {
         overflow-x: hidden;
-        max-width: 100vh;
+        width: 100%;
         max-height: 1500vh;
         background: linear-gradient(180deg, #FFFFFF 0%, #F3F2F2 38.02%, rgba(245, 244, 244, 0.865546) 71.87%, rgba(255, 255, 255, 0) 100%);
       }
@@ -81,7 +81,7 @@ header {
    transition: all 0.5s;
 
    @include mq($mq-sm) {
-    padding: 16px;
+    padding:16px;
     
 background: linear-gradient(180deg, #FFFFFF 0%, #F3F2F2 38.02%, rgba(245, 244, 244, 0.865546) 78.65%, rgba(255, 255, 255, 0) 100%);
 }
@@ -330,8 +330,8 @@ section {
              
                 @include mq($mq-s) {
                     margin-right: 32px;
-                    max-width: 450px;
-                    transform: translateX(5%);
+                    max-width: 500px;
+                    transform: translateX(-5%);
                   }
                 @include mq($mq-xs) {
                     margin-right: 32px;
@@ -420,7 +420,9 @@ section {
             flex-direction: column-reverse;
             align-items: flex-start;
         }
-        
+        @include mq($mq-s) {
+            padding-top: 32px;
+        }
         div.project-img {
             display: flex;
             height: 100%;
@@ -441,12 +443,12 @@ section {
 
                 @include mq($mq-s) {
                     transform: translateX(-22%);
-                    max-width: 400px;
+                    max-width: 500px;
                 }
 
                 @include mq($mq-xs) {
                     transform: translateX(-35%);
-
+                    max-width: 400px;
                 }
             }
 
@@ -460,7 +462,7 @@ section {
                 }
                 @include mq($mq-s) {
                     max-width: 140px;
-                    transform: translateX(-125%)
+                    transform: translateX(-100%)
                 }
                 @include mq($mq-xs) {
 
@@ -487,6 +489,9 @@ section {
                 padding: 0 0 32px 0;
                 margin:0;
                 transform: translateY(100%);
+            }
+            @include mq($mq-s) {
+                transform: translateY(80%);
             }
 
             .png.plan {
@@ -618,7 +623,7 @@ section {
         }
         @include mq($mq-s) {
             flex-direction: column-reverse;
-            align-items: flex-end;
+            align-items: center;
             padding-bottom: 40px;
         }
         img {
@@ -634,8 +639,8 @@ section {
             @include mq($mq-xs) {
                 max-width: 280px;
             }
-
         }
+
         div.info {
             max-width: 420px;
 
@@ -646,6 +651,7 @@ section {
             @include mq($mq-s) {
                 padding: 0 0 16px 0;
                 text-align: right;
+                align-self: flex-end;
             }
 
         }

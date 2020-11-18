@@ -31,6 +31,7 @@ sections.forEach(section => {
   observer.observe(section)
 
 })
+
 const headerObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
       if (entry.intersectionRatio > 0.2) {
@@ -44,6 +45,7 @@ const headerObserver = new IntersectionObserver(entries => {
 }, {
       threshold: [0.0, 0.2, 1.0]
 })
+
 window.onscroll = function headerChanging() {
   if (gallery.classList.contains("in-view")) {
     headerSpan.style.opacity = '0'

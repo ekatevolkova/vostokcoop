@@ -4,9 +4,6 @@ section.animation {
     width: 100vw;
     height: 100vh;
 
-    @include mq($mq-sm) {
-        height: 95vh;
-    }
 
     position: relative;
     display: flex;

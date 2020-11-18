@@ -28,18 +28,15 @@ $mq-xs: 400px;
 }
 
 html {
-    @include mq($mq-sm) {
         overflow-x: hidden;
-    }
 }
 body {
     background: linear-gradient(180deg, #E5E3E3 0%, #EEEDED 59.46%, #FFFFFF 68.71%, #FFFFFF 97.4%);
     overflow-x: hidden;
-    max-height: 200vh;
     scroll-behavior: smooth;
     position: relative;
 
-    @include mq($mq-sm) {
+    @include mq($mq-m) {
         overflow-x: hidden;
         width: 100%;
         max-height: 1500vh;
@@ -132,9 +129,6 @@ section {
     
     width: 720vw;
 
-    @include mq-xl() {
-        width: 680vw;
-    }
     @include mq-xxl() {
         width: 540vw;
     }
@@ -177,7 +171,7 @@ section {
         padding-top: 96px;
 
         opacity: 0;
-        transition: opacity 0.5s both;
+        
 
         @include mq($mq-sm) {
             width: 100%;
@@ -198,15 +192,13 @@ section {
     .intro-frame, .w75 {
         width: 75vw;
 
-        @include mq-xxl() {
-            width: 75vw;
+        @include mq-xl() {
+            width: 85vw;
         }
     }
     .w125 {
         width: 125vw;
-        @include mq-xxl() {
-            width: 115vw;
-        }
+
     }
     .w150 {
         width: 150vw;
@@ -218,11 +210,11 @@ section {
     .w175 {
         width: 175vw;
         @include mq-xl() {
-            width: 165vw;
+            width: 190vw;
         }
-        @include mq-xxl() {
-            width: 155vw;
-        }
+        // @include mq-xxl() {
+        //     width: 155vw;
+        // }
         @include mq($mq-sm) {
             margin-top: -80px;
         }
@@ -517,6 +509,9 @@ section {
                 @include mq($mq-sm) {
                     margin: 0;
                 }
+                @include mq-xl() {
+                    margin: 0;
+                }
             }
             h3 {
                 margin-top: 8px;
@@ -580,10 +575,6 @@ section {
         img {
             max-width: 1100px;
 
-            @include mq-xl() {
-                max-width: 1300px;
-            }
-
             @include mq($mq-m) {
                 max-width: 900px;
               }
@@ -611,6 +602,9 @@ section {
             @include mq($mq-sm) {
                 margin: 0;
               }
+              @include mq-xxl() {
+                margin-left: -96px;
+            }
         }
     }
 
@@ -659,6 +653,9 @@ section {
 
 }
 
+.zoom {
+    transform: scale(1.5);
+}
 // section.in-view {
 //     animation: fadein 0.5s 0.5s both;
 // }

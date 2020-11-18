@@ -462,8 +462,7 @@ header nav {
                     transform: translateX(-100%)
                 }
                 @include mq($mq-xs) {
-
-                    transform: translateX(-135%)
+                    display: none;
                 }
             }
             .png:hover {

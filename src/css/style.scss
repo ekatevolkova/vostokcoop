@@ -432,7 +432,9 @@ header nav {
                 @include mq-xl() {
                     max-width: 1200px;
                 }
-
+                @include mq($mq-m) {
+                    transform: translateX(0);
+                }
                 @include mq($mq-sm) {
                     transform: translateX(-20%);
                     max-width: 700px;
@@ -455,14 +457,14 @@ header nav {
 
                 @include mq($mq-sm) {
                     padding: 0;
-                    transform: translateX(-100%)
+                    transform: translateX(-100%);
                 }
                 @include mq($mq-s) {
                     max-width: 140px;
-                    transform: translateX(-100%)
+                    transform: translateX(-100%);
                 }
                 @include mq($mq-xs) {
-                    display: none;
+                        transform: translateX(-140%);
                 }
             }
             .png:hover {

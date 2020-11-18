@@ -5,6 +5,11 @@ $mq-sm: 900px;
 $mq-s: 600px;
 $mq-xs: 400px;
 
+@mixin mq-min($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
 @mixin mq($width) {
     @media (max-width: $width) {
         @content;
@@ -33,14 +38,13 @@ html {
 body {
     background: linear-gradient(180deg, #E5E3E3 0%, #EEEDED 59.46%, #FFFFFF 68.71%, #FFFFFF 97.4%);
     overflow-x: hidden;
-    scroll-behavior: smooth;
     position: relative;
 
     @include mq($mq-m) {
         overflow-x: hidden;
         width: 100%;
         max-height: 1500vh;
-        background: linear-gradient(180deg, #FFFFFF 0%, #F3F2F2 38.02%, rgba(245, 244, 244, 0.865546) 71.87%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(180deg, #E8E7E7 0%, #FFFFFF 18.75%, #FBFBFB 36.98%, #E7E6E6 51.04%, #FEFDFD 62.5%, #FBFBFB 96.09%, #EEEDED 98.96%);
       }
 
 }
@@ -115,9 +119,6 @@ header nav {
         display: none;
     }
 }
-section {
-    scroll-snap-align: start;
-}
 
 .scroll {
     animation: fadein 2s 1s both;
@@ -132,7 +133,7 @@ section {
     @include mq-xxl() {
         width: 540vw;
     }
-    background: linear-gradient(180deg, #E5E3E3 0%, #FFFFFF 21.35%);
+    background: linear-gradient(180deg, #EAE8E8 0%, #FFFFFF 21.35%);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -144,7 +145,7 @@ section {
         justify-content: center;
         height: 100%;
         width: 100vw;
-        background: linear-gradient(180deg, #E5E3E3 0%, #FFFFFF 17.71%, #E8E6E6 33.33%, #F8F8F8 53.12%, #E8E6E6 71.87%, #FFFFFF 86.46%, #ECEBEB 100%);
+        background: linear-gradient(180deg, #E8E7E7 0%, #FFFFFF 18.75%, #FBFBFB 36.98%, #E7E6E6 51.04%, #FEFDFD 62.5%, #FBFBFB 96.09%, #EEEDED 98.96%);
 
       }
     
@@ -159,7 +160,8 @@ section {
         z-index: -1;
 
         @include mq($mq-sm) {
-            display: none;
+            top: 80vh;
+            height: 50vh;
           }
     }
  
@@ -192,9 +194,9 @@ section {
     .intro-frame, .w75 {
         width: 75vw;
 
-        @include mq-xl() {
-            width: 85vw;
-        }
+        // @include mq-xl() {
+        //     width: 85vw;
+        // }
     }
     .w125 {
         width: 125vw;
@@ -203,18 +205,17 @@ section {
     .w150 {
         width: 150vw;
 
-        @include mq-xxl() {
-            width: 135vw;
-        }
+        // @include mq-xxl() {
+        //     width: 135vw;
+        // }
     }
     .w175 {
         width: 175vw;
+
         @include mq-xl() {
             width: 190vw;
         }
-        // @include mq-xxl() {
-        //     width: 155vw;
-        // }
+
         @include mq($mq-sm) {
             margin-top: -80px;
         }
@@ -225,12 +226,12 @@ section {
     }
     .w200 {
         width: 200vw;
-        @include mq-xl() {
-            width: 175vw;
-        }
-        @include mq-xxl() {
-            width: 160vw;
-        }
+        // @include mq-xl() {
+        //     width: 175vw;
+        // }
+        // @include mq-xxl() {
+        //     width: 160vw;
+        // }
     }
 
     .w75, .w100, .w125, .w150, .w175, .w200 {
@@ -335,7 +336,9 @@ section {
             .png {
                 max-width: 800px;
                 margin: -16px -240px 0 0;
-
+                @include mq($mq-sm) {
+                    margin: 0px -240px 0 0;
+                }
                 @include mq($mq-s) {
                     max-width: 400px;
                     margin: 12px 0 0 0;
@@ -346,7 +349,9 @@ section {
                   }
             }
             .png:hover {
-                transform: scale(1.2) translate(10%, 10%);
+                @include mq-min($mq-m) {
+                    transform: scale(1.2) translate(10%, 10%);
+                }
             }
 
         }
@@ -377,7 +382,7 @@ section {
                 max-width: 550px;
     
                 @include mq-xl() {
-                    max-width: 800px;
+                    max-width: 700px;
                 }
     
                 @include mq($mq-m) {
@@ -462,8 +467,9 @@ section {
                 }
             }
             .png:hover {
+                @include mq-min($mq-sm) {
                 transform: scale(1.2) translate(10%, 0);
-
+                }
                 @include mq-xl() {
                     transform: scale(1.5) translate(10%, 0);
                 }
@@ -499,8 +505,11 @@ section {
                     display: none;
                 }
             }
+            @include mq-min($mq-sm) {
             .png:hover {
-                transform: scale(1.5) translate(-10%, 0);
+                
+                transform: scale(1.2) translate(-10%, 0);
+                }
             }
 
             h4, h3 {
@@ -512,6 +521,10 @@ section {
                 @include mq-xl() {
                     margin: 0;
                 }
+                @include mq-min(1450px) {
+                    margin-left: -120px;
+                }
+
             }
             h3 {
                 margin-top: 8px;
@@ -622,7 +635,7 @@ section {
         }
         img {
             max-width: 500px;
-
+            transition: transform 0.5s ease;
             @include mq($mq-sm) {
                 max-width: 450px;
             }
@@ -634,7 +647,11 @@ section {
                 max-width: 280px;
             }
         }
-
+        img:hover {
+            @include mq-min($mq-sm) {
+                transform: scale(1.15);
+            }
+        }
         div.info {
             max-width: 420px;
 

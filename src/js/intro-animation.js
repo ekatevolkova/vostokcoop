@@ -12,6 +12,7 @@ const spanTag = line1.querySelector('span')
 const spanWidth = spanTag.clientWidth
 
 const cursorClip = document.querySelector('div.clip')
+const paper = document.querySelector('div.tracingpaper')
 
 const mq = window.matchMedia("(min-width: 600px) and (prefers-reduced-motion: no-preference)")
 
@@ -47,24 +48,49 @@ const runScripts = function () {
 
 
         let cursorCurrentX = 0
-        let cursorCurrentY = 0
         let cursorAimX = 0
-        let cursorAimY = 0
+        let w = window.innerWidth
+        let insetRight = 0
+        let insetLeft = 0
 
     const changeCursor = function () {
-        cursorCurrentX = cursorCurrentX + (cursorAimX - cursorCurrentX) 
-        cursorCurrentY = cursorCurrentY + (cursorAimY - cursorCurrentY) 
+        cursorCurrentX = cursorAimX * 100 / w * 0.75
+        insetRight =  85 - cursorCurrentX 
+        insetLeft = 95 - (85 - cursorCurrentX) 
+        cursorClip.style.clipPath = `inset(0 ${insetRight}vw 0 ${insetLeft}vw)`
 
-        // cursorClip.style.clipPath = `inset(0 ${cursorCurrentX}px 0 ${cursorCurrentY}px)`
+        paper.style.transform = `translateX(${insetRight * -1 +3}vw)`
+
+
 
         requestAnimationFrame(changeCursor)
     }
     document.addEventListener('mousemove', function (event) {
         cursorAimX = event.pageX 
-        cursorAimY = event.pageY 
+       
     }) 
 
     changeCursor()
 
 }
 runScripts()
+
+// let cursorCurrentX = 0
+// let cursorCurrentY = 0
+// let cursorAimX = 0
+// let cursorAimY = 0
+
+// const changeCursor = function () {
+// cursorCurrentX = cursorCurrentX + (cursorAimX - cursorCurrentX) 
+// cursorCurrentY = cursorCurrentY + (cursorAimY - cursorCurrentY) 
+
+// // cursorClip.style.clipPath = `inset(0 ${cursorCurrentX}px 0 ${cursorCurrentY}px)`
+
+// requestAnimationFrame(changeCursor)
+// }
+// document.addEventListener('mousemove', function (event) {
+// cursorAimX = event.pageX 
+// cursorAimY = event.pageY 
+// }) 
+
+// changeCursor()

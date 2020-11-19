@@ -33,17 +33,18 @@ ScrollTrigger.matchMedia({
       scrub: 0.5
     },
     x: "25%",
-    ease: "none",
-    duration: 1
+    ease: "none"
+    
   })
   
   gsap.to(".monument", {
     scrollTrigger: {
       trigger: ".monument",
       start: "top 90%",
-      scrub: 0.5
+      scrub: 0.5,
+      markers: 'true'
     },
-    x: "-20%",
+    x: "-100%",
     ease: "none"
   })
 

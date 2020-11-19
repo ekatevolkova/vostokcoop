@@ -218,6 +218,10 @@ header nav {
 
         @include mq($mq-sm) {
             margin-top: -80px;
+            margin-bottom: -80px;
+        }
+        @include mq($mq-s) {
+            margin-bottom: 0px;
         }
         @include mq($mq-xs) {
             margin-top: -64px;
@@ -341,8 +345,8 @@ header nav {
                 }
                 @include mq($mq-s) {
                     max-width: 400px;
-                    margin: 12px 0 0 0;
-                    transform: scale(1.2) translateX(30%);
+                    // margin: 12px 0 0 0;
+                    // transform: scale(1.2) translateX(30%);
                   }
                 @include mq($mq-xs) {
                     max-width: 300px;
@@ -461,11 +465,9 @@ header nav {
                 }
                 @include mq($mq-s) {
                     max-width: 140px;
-                    transform: translateX(-100%);
+                    transform: translateX(-150%);
                 }
-                @include mq($mq-xs) {
-                        transform: translateX(-140%);
-                }
+             
             }
             .png:hover {
                 @include mq-min($mq-sm) {

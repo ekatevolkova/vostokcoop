@@ -69,28 +69,12 @@ const runScripts = function () {
         cursorAimX = event.pageX 
        
     }) 
-
+    document.addEventListener('touchmove', function (event) {
+        cursorAimX = event.pageX 
+       
+    }) 
     changeCursor()
 
 }
 runScripts()
 
-// let cursorCurrentX = 0
-// let cursorCurrentY = 0
-// let cursorAimX = 0
-// let cursorAimY = 0
-
-// const changeCursor = function () {
-// cursorCurrentX = cursorCurrentX + (cursorAimX - cursorCurrentX) 
-// cursorCurrentY = cursorCurrentY + (cursorAimY - cursorCurrentY) 
-
-// // cursorClip.style.clipPath = `inset(0 ${cursorCurrentX}px 0 ${cursorCurrentY}px)`
-
-// requestAnimationFrame(changeCursor)
-// }
-// document.addEventListener('mousemove', function (event) {
-// cursorAimX = event.pageX 
-// cursorAimY = event.pageY 
-// }) 
-
-// changeCursor()

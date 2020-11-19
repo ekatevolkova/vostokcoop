@@ -459,6 +459,9 @@ header nav {
                 max-width: 250px;
                 padding: 0 0 64px 64px;
 
+                @include mq-min($mq-sm) {
+                    transform: translateX(0);
+                }
                 @include mq($mq-sm) {
                     padding: 0;
                     transform: translateX(-100%);
@@ -484,6 +487,10 @@ header nav {
             display: flex;
             height: 100%;
             padding: 0 32px 0 0;
+
+            @include mq-min($mq-sm) {
+                transform: translateY(0);
+            }
 
             @include mq($mq-sm) {
                 

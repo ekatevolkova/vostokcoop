@@ -55,11 +55,11 @@ const runScripts = function () {
 
     const changeCursor = function () {
         cursorCurrentX = cursorAimX * 100 / w * 0.75
-        insetRight =  85 - cursorCurrentX 
-        insetLeft = 95 - (85 - cursorCurrentX) 
+        insetRight =  85 - cursorCurrentX +2
+        insetLeft = 95 - (85 - cursorCurrentX) -1
         cursorClip.style.clipPath = `inset(0 ${insetRight}vw 0 ${insetLeft}vw)`
 
-        paper.style.transform = `translateX(${insetRight * -1 +3}vw)`
+        paper.style.transform = `translateX(${insetRight * -1 + 3 }vw)`
 
 
 

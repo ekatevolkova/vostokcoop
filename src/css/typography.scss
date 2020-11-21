@@ -30,7 +30,7 @@ footer a {
 }
 h2 {
     font-size: 21px;
-    width: 500px;
+    max-width: 450px;
     height: auto;
     text-align: left;
 
@@ -42,11 +42,11 @@ h2 {
         text-align: right;
     }
     @include mq($mq-s) {
-      font-size: 21px;
+      font-size: 18px;
       text-align: right;
+      max-width: 250px;
   }
     @include mq($mq-xs) {
-      font-size: 18px;
       text-align: right;
   }
 }

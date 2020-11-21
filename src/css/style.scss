@@ -106,7 +106,11 @@ header h1 img {
     opacity: 0;
     transition: opacity 0.4s;
     margin-top: -10px;
-    height: 32px;
+    height: 28px;
+
+    @include mq($mq-s) {
+        height: 24px;
+    }
 }
 header span {
     transition: opacity 0.4s;
@@ -160,8 +164,7 @@ header nav {
         z-index: -1;
 
         @include mq($mq-sm) {
-            top: 80vh;
-            height: 50vh;
+            display: none;
           }
     }
  
@@ -193,10 +196,6 @@ header nav {
 
     .intro-frame, .w75 {
         width: 75vw;
-
-        // @include mq-xl() {
-        //     width: 85vw;
-        // }
     }
     .w125 {
         width: 125vw;
@@ -204,10 +203,6 @@ header nav {
     }
     .w150 {
         width: 150vw;
-
-        // @include mq-xxl() {
-        //     width: 135vw;
-        // }
     }
     .w175 {
         width: 175vw;
@@ -216,6 +211,10 @@ header nav {
             width: 190vw;
         }
 
+       
+    }
+    .w200 {
+        width: 200vw;
         @include mq($mq-sm) {
             margin-top: -80px;
             margin-bottom: -80px;
@@ -227,15 +226,6 @@ header nav {
             margin-top: -64px;
             padding-bottom: 0;
         }
-    }
-    .w200 {
-        width: 200vw;
-        // @include mq-xl() {
-        //     width: 175vw;
-        // }
-        // @include mq-xxl() {
-        //     width: 160vw;
-        // }
     }
 
     .w75, .w100, .w125, .w150, .w175, .w200 {
@@ -249,16 +239,9 @@ header nav {
     .intro-frame {
             padding: 0 0px 0 200px;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: flex-start;
             flex-wrap: nowrap;
             margin: 0;
-            
-            @include mq-xl() {
-                width: 50vw;
-            }
-            @include mq-xxl() {
-                width: 35vw;
-            }
 
             div.intro-img { 
                 display: none;
@@ -385,12 +368,9 @@ header nav {
             img {
                 max-width: 550px;
     
-                @include mq-xl() {
-                    max-width: 700px;
-                }
     
                 @include mq($mq-m) {
-                    max-width: 500px;
+                    max-width: 450px;
                   }
                 
                 @include mq($mq-sm) {
@@ -415,30 +395,26 @@ header nav {
     div.pr3 {
         flex-direction: row-reverse;
         align-items: center;
+        justify-content: space-evenly;
         
-
         @include mq($mq-sm) {
             flex-direction: column-reverse;
             align-items: flex-start;
         }
-        @include mq($mq-s) {
-            padding-top: 32px;
-        }
+        
         div.project-img {
             display: flex;
             height: 100%;
             align-items: center;
 
             
-            img {
-                max-width: 850px;
+            .nepal {
+                max-width: 1000px;
+                
+                @include mq(1000px) {
+                    max-width: 800px;
+                }
 
-                @include mq-xl() {
-                    max-width: 1200px;
-                }
-                @include mq($mq-m) {
-                    transform: translateX(0);
-                }
                 @include mq($mq-sm) {
                     transform: translateX(-20%);
                     max-width: 700px;
@@ -457,14 +433,16 @@ header nav {
 
             .png {
                 max-width: 250px;
-                padding: 0 0 64px 64px;
+                padding: 0 0 0 64px;
 
-                @include mq-min($mq-sm) {
-                    transform: translateX(0);
+                @include mq(1000px) {
+                    max-width: 200px;
+                    // padding: 0 0 0 32px;
                 }
+
                 @include mq($mq-sm) {
                     padding: 0;
-                    transform: translateX(-100%);
+                    transform: translateX(-200%);
                 }
                 @include mq($mq-s) {
                     max-width: 140px;
@@ -476,9 +454,6 @@ header nav {
                 @include mq-min($mq-sm) {
                 transform: scale(1.2) translate(10%, 0);
                 }
-                @include mq-xl() {
-                    transform: scale(1.5) translate(10%, 0);
-                }
             }
         }
         
@@ -486,28 +461,24 @@ header nav {
         div.info {
             display: flex;
             height: 100%;
-            padding: 0 32px 0 0;
-
-            @include mq-min($mq-sm) {
-                transform: translateY(0);
-            }
+            padding: 0 64px 0 0;
 
             @include mq($mq-sm) {
                 
                 padding: 0 0 32px 0;
                 margin:0;
-                transform: translateY(100%);
+                transform: translateY(75%);
             }
             @include mq($mq-s) {
-                transform: translateY(80%);
+                transform: translateY(40%);
             }
 
             .png.plan {
-                width: 450px;
-                margin-bottom: 64px;
+                width: 250px;
+                margin-bottom: 48px;
 
-                @include mq($mq-m) {
-                max-width: 300px;
+                @include mq(1000px) {
+                    max-width: 200px;
                 }
 
                 @include mq($mq-sm) {
@@ -518,24 +489,10 @@ header nav {
             @include mq-min($mq-sm) {
             .png:hover {
                 
-                transform: scale(1.2) translate(-10%, 0);
+                transform: scale(1.3);
                 }
             }
 
-            h4, h3 {
-                margin-left: -120px;
-
-                @include mq($mq-sm) {
-                    margin: 0;
-                }
-                @include mq-xl() {
-                    margin: 0;
-                }
-                @include mq-min(1450px) {
-                    margin-left: -120px;
-                }
-
-            }
             h3 {
                 margin-top: 8px;
             
@@ -556,34 +513,35 @@ header nav {
         }
         @include mq($mq-xs) {
             flex-direction: column-reverse;
-            justify-content: flex-start;
+            align-items: flex-end;
         }
-
-        img {
-            max-width: 500px;
-
-            @include mq-xl() {
-                max-width: 600px;
-            }
-            @include mq($mq-sm) {
-                max-width: 480px;
-            }
-            @include mq($mq-s) {
-                max-width: 280px;
+        div.project-img {
+           
+            img {
+                max-width: 500px;
+    
+                @include mq-xl() {
+                    max-width: 600px;
+                }
+                @include mq($mq-sm) {
+                    max-width: 480px;
+                }
+                @include mq($mq-s) {
+                    width: 100%;
+                }
             }
         }
+    
         div.info {
-            padding: 0 0 0 48px;
+            padding: 0 0 0 32px;
             max-width: 420px;
 
-            @include mq($mq-sm) {
-                padding: 0 0 0 32px;
-              }
               @include mq($mq-s) {
                 padding: 0 0 0 16px;
             }
             @include mq($mq-xs) {
                 padding: 0 0 16px 0;
+                text-align: right;
             }
         }
     }
@@ -601,7 +559,10 @@ header nav {
             @include mq($mq-m) {
                 max-width: 900px;
               }
-
+            
+            @include mq(1000px) {
+                max-width: 800px;
+            }
             @include mq($mq-sm) {
                 transform: translateX(10%);
             }
@@ -632,47 +593,69 @@ header nav {
     }
 
     div.pr6 {
-        flex-direction: row-reverse;
+        flex-direction: column;
+        justify-content: space-between;
 
         @include mq($mq-sm) {
-            justify-content: center;
-            flex-direction: row;
+            // justify-content: center;
+            // flex-direction: row;
+
+            flex-direction: column-reverse;
+            align-items: center;
         }
         @include mq($mq-s) {
             flex-direction: column-reverse;
-            align-items: center;
-            padding-bottom: 40px;
+            align-items: flex-end;
         }
-        img {
-            max-width: 500px;
-            transition: transform 0.5s ease;
-            @include mq($mq-sm) {
-                max-width: 450px;
-            }
-            @include mq($mq-s) {
-                max-width: 360px;
-            }
 
-            @include mq($mq-xs) {
-                max-width: 280px;
-            }
-        }
-        img:hover {
+        div.project-img {
+            flex-direction: row;
+            align-items: center;
+            padding: 0 0 64px 0;
             @include mq-min($mq-sm) {
-                transform: scale(1.15);
+                align-items: flex-end;
+            }
+            .stand {
+                max-width: 500px;
+                transition: transform 0.5s ease;
+                padding: 0 64px 0 0;
+
+            
+                @include mq($mq-sm) {
+                    max-width: 225px;
+                    padding: 0 0 64px 48px;
+                }
+            }
+            .stand:hover {
+                @include mq-min($mq-sm) {
+                    transform: scale(1.15);
+                }
+            }
+            .stand-photo {
+                max-width: 600px;
+
+                @include mq(1000px) {
+                    max-width: 500px;
+                }
+                @include mq($mq-sm) {
+                    max-width: 100%;
+                    padding: 0 0 0 48px;
+                }
             }
         }
+        
         div.info {
             max-width: 420px;
 
             @include mq($mq-sm) {
-               padding: 0 0 0 32px;
+               padding: 0;
+               text-align: right;
+                align-self: flex-end;
             }
 
             @include mq($mq-s) {
                 padding: 0 0 16px 0;
-                text-align: right;
-                align-self: flex-end;
+                
             }
 
         }

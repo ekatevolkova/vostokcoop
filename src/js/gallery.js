@@ -24,7 +24,7 @@ gsap.to(container, {
 
 ScrollTrigger.matchMedia({
 
-  "(max-width: 899px)": function() {
+  "(max-width: 900px)": function() {
   
   gsap.to(".square", {
     scrollTrigger: {
@@ -41,23 +41,13 @@ ScrollTrigger.matchMedia({
     scrollTrigger: {
       trigger: ".monument",
       start: "top 90%",
-      scrub: 0.5,
-      markers: 'true'
+      scrub: 0.5
     },
-    x: "-100%",
+    x: "-100vw",
     ease: "none"
   })
 
-  gsap.to(".scheme", {
-    scrollTrigger: {
-      trigger: ".scheme",
-      start: "top 40%",
-      scrub: 0.5
-    },
-    y: "-80%",
-    opacity: 0.2,
-    ease: "none"
-  })
+
 
   gsap.to(".nepal", {
     scrollTrigger: {
@@ -65,7 +55,18 @@ ScrollTrigger.matchMedia({
       start: "top 90%",
       scrub: 0.5
     },
-    x: "20%",
+    x: "15%",
+    ease: "none"
+  })
+
+  gsap.to(".scheme", {
+    scrollTrigger: {
+      trigger: ".scheme",
+      start: "top 30%",
+      // scrub: 0.5
+    },
+    x: "-200%",
+    y: "-50%",
     ease: "none"
   })
 
@@ -92,6 +93,25 @@ ScrollTrigger.matchMedia({
 
   }
   })
+
+
+  ScrollTrigger.matchMedia({
+
+    "(max-width: 600px)": function() {
+    
+  gsap.to(".scheme", {
+    scrollTrigger: {
+      trigger: ".scheme",
+      start: "top 30%",
+      // scrub: 0.5
+    },
+    x: "-150%",
+    y: "-50%",
+    ease: "none"
+  })
+
+}
+})
 // gsap.utils.toArray('.frame').forEach(frame=> {
 //   ScrollTrigger.create({
 //       trigger: frame,

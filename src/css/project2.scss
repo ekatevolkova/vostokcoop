@@ -1,0 +1,39 @@
+div.pr2 {
+    flex-direction: column-reverse;
+    padding-left: 120px;
+    margin-bottom: -64px;
+
+    @include mq($mq-sm) {
+        padding: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    div.project-img {
+        
+        img {
+            max-width: 550px;
+
+
+            @include mq($mq-m) {
+                max-width: 450px;
+              }
+            
+            @include mq($mq-sm) {
+               max-width: 100%;
+               padding: 0;
+            }
+        }
+    }
+    
+
+    div.info {
+        padding: 0px 0px 32px 0px;
+        margin-left: -120px;
+
+        @include mq($mq-sm) {
+        margin-left: 0;
+        text-align: right;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+div.pr4 {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    @include mq($mq-sm) {
+        justify-content: center;
+    }
+    @include mq($mq-xs) {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    div.project-img {
+       
+        img {
+            max-width: 500px;
+
+            @include mq-xl() {
+                max-width: 600px;
+            }
+            @include mq($mq-sm) {
+                max-width: 480px;
+            }
+            @include mq($mq-s) {
+                width: 100%;
+            }
+        }
+    }
+
+    div.info {
+        padding: 0 0 0 32px;
+        max-width: 420px;
+
+          @include mq($mq-s) {
+            padding: 0 0 0 16px;
+        }
+        @include mq($mq-xs) {
+            padding: 0 0 16px 0;
+            text-align: right;
+        }
+    }
+}

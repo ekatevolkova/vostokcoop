@@ -1,0 +1,72 @@
+div.pr6 {
+    flex-direction: column;
+    justify-content: center;
+ 
+    @include mq($mq-sm) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    @include mq($mq-s) {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    div.project-img {
+
+        flex-direction: row;
+        padding: 0 0 64px 0;
+        align-items: center;
+       
+
+        @include mq($mq-sm) {
+            align-items: flex-end;
+        }
+
+        .stand {
+            max-width: 500px;
+            transition: transform 0.5s ease;
+            padding: 0 64px 0 0;
+
+        
+            @include mq($mq-sm) {
+                max-width: 225px;
+                padding: 0 0 64px 48px;
+            }
+        }
+        .stand:hover {
+            @include mq-min($mq-sm) {
+                transform: scale(1.15);
+            }
+        }
+        .stand-photo {
+            max-width: 600px;
+            
+
+            @include mq(1000px) {
+                max-width: 450px;
+                padding: 0 0 64px 0;
+            }
+            @include mq($mq-sm) {
+                max-width: 100%;
+                padding: 0 0 0 48px;
+            }
+        }
+    }
+    
+    div.info {
+        max-width: 420px;
+
+        @include mq($mq-sm) {
+           padding: 0;
+           text-align: right;
+            align-self: flex-end;
+        }
+
+        @include mq($mq-s) {
+            padding: 0 0 16px 0;
+            
+        }
+
+    }
+}
+

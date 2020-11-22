@@ -149,7 +149,8 @@ header nav {
         justify-content: center;
         height: 100%;
         width: 100vw;
-        background: linear-gradient(180deg, #E8E7E7 0%, #FFFFFF 18.75%, #FBFBFB 36.98%, #E7E6E6 51.04%, #FEFDFD 62.5%, #FBFBFB 96.09%, #EEEDED 98.96%);
+        background: linear-gradient(180deg, #E6E4E5 0%, #FFFFFF 4.17%, #FFFFFF 11.98%, #E8E6E6 22.4%, #F8F8F8 27.6%, #FFFFFF 40.62%, #E8E6E6 51.56%, #F8F8F8 64.58%, #FFFFFF 77.08%, #F9F9F9 84.37%, #ECEBEB 96.87%);
+
 
       }
     
@@ -164,7 +165,7 @@ header nav {
         z-index: -1;
 
         @include mq($mq-sm) {
-            display: none;
+           display:none;
           }
     }
  
@@ -174,7 +175,7 @@ header nav {
         align-items: center;
         height: 100%;
         padding-top: 96px;
-
+        flex-wrap: nowrap;
         opacity: 0;
         
 
@@ -243,6 +244,9 @@ header nav {
             flex-wrap: nowrap;
             margin: 0;
 
+            @include mq(1000px) {
+                padding: 0 0px 0 100px;
+            }
             div.intro-img { 
                 display: none;
             }
@@ -284,384 +288,7 @@ header nav {
         }
     }
 
-    div.pr1 {
-        flex-direction: row;
-        position: relative;
-        
-        @include mq($mq-sm) {
-            flex-direction: column-reverse;
-        }
-
-        .project-img {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            img {
-                max-width: 1000px;
-    
-                @include mq-xl() {
-                    max-width: 2000px;
-                }
-    
-                @include mq($mq-m) {
-                    max-width: 800px;
-                    transform: translateX(-8%);
-                  }
-             
-                @include mq($mq-s) {
-                    margin-right: 32px;
-                    max-width: 500px;
-                    transform: translateX(-5%);
-                  }
-                @include mq($mq-xs) {
-                    margin-right: 32px;
-                    max-width: 350px;
-                    transform: translateX(0);
-                  }
-
-            }
-            .png {
-                max-width: 800px;
-                margin: -16px -240px 0 0;
-                @include mq($mq-sm) {
-                    margin: 0px -240px 0 0;
-                }
-                @include mq($mq-s) {
-                    max-width: 400px;
-                    // margin: 12px 0 0 0;
-                    // transform: scale(1.2) translateX(30%);
-                  }
-                @include mq($mq-xs) {
-                    max-width: 300px;
-                  }
-            }
-            .png:hover {
-                @include mq-min($mq-m) {
-                    transform: scale(1.2) translate(10%, 10%);
-                }
-            }
-
-        }
-
-        div.info {
-            padding: 0 0 0 32px;
-
-            @include mq($mq-sm) {
-                padding: 0 0 32px 0;
-            }
-        }
-    }
-
-    div.pr2 {
-        flex-direction: column-reverse;
-        padding-left: 120px;
-        margin-bottom: -64px;
-
-        @include mq($mq-sm) {
-            padding: 0;
-            margin-bottom: 0;
-            width: 100%;
-        }
-
-        div.project-img {
-            
-            img {
-                max-width: 550px;
-    
-    
-                @include mq($mq-m) {
-                    max-width: 450px;
-                  }
-                
-                @include mq($mq-sm) {
-                   max-width: 100%;
-                   padding: 0;
-                }
-            }
-        }
-        
-
-        div.info {
-            padding: 0px 0px 32px 0px;
-            margin-left: -120px;
-
-            @include mq($mq-sm) {
-            margin-left: 0;
-            text-align: right;
-            }
-        }
-    }
-
-    div.pr3 {
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-evenly;
-        
-        @include mq($mq-sm) {
-            flex-direction: column-reverse;
-            align-items: flex-start;
-        }
-        
-        div.project-img {
-            display: flex;
-            height: 100%;
-            align-items: center;
-
-            
-            .nepal {
-                max-width: 1000px;
-                
-                @include mq(1000px) {
-                    max-width: 800px;
-                }
-
-                @include mq($mq-sm) {
-                    transform: translateX(-20%);
-                    max-width: 700px;
-                }
-
-                @include mq($mq-s) {
-                    transform: translateX(-22%);
-                    max-width: 500px;
-                }
-
-                @include mq($mq-xs) {
-                    transform: translateX(-35%);
-                    max-width: 400px;
-                }
-            }
-
-            .png {
-                max-width: 250px;
-                padding: 0 0 0 64px;
-
-                @include mq(1000px) {
-                    max-width: 200px;
-                    // padding: 0 0 0 32px;
-                }
-
-                @include mq($mq-sm) {
-                    padding: 0;
-                    transform: translateX(-200%);
-                }
-                @include mq($mq-s) {
-                    max-width: 140px;
-                    transform: translateX(-150%);
-                }
-             
-            }
-            .png:hover {
-                @include mq-min($mq-sm) {
-                transform: scale(1.2) translate(10%, 0);
-                }
-            }
-        }
-        
-        
-        div.info {
-            display: flex;
-            height: 100%;
-            padding: 0 64px 0 0;
-
-            @include mq($mq-sm) {
-                
-                padding: 0 0 32px 0;
-                margin:0;
-                transform: translateY(75%);
-            }
-            @include mq($mq-s) {
-                transform: translateY(40%);
-            }
-
-            .png.plan {
-                width: 250px;
-                margin-bottom: 48px;
-
-                @include mq(1000px) {
-                    max-width: 200px;
-                }
-
-                @include mq($mq-sm) {
-                    margin-bottom: 0;
-                    display: none;
-                }
-            }
-            @include mq-min($mq-sm) {
-            .png:hover {
-                
-                transform: scale(1.3);
-                }
-            }
-
-            h3 {
-                margin-top: 8px;
-            
-          
-                @include mq($mq-sm) {
-                    margin-right: 32px;
-                }
-            }    
-        }
-    }
-
-    div.pr4 {
-        flex-direction: row;
-        justify-content: flex-start;
-
-        @include mq($mq-sm) {
-            justify-content: center;
-        }
-        @include mq($mq-xs) {
-            flex-direction: column-reverse;
-            align-items: flex-end;
-        }
-        div.project-img {
-           
-            img {
-                max-width: 500px;
-    
-                @include mq-xl() {
-                    max-width: 600px;
-                }
-                @include mq($mq-sm) {
-                    max-width: 480px;
-                }
-                @include mq($mq-s) {
-                    width: 100%;
-                }
-            }
-        }
-    
-        div.info {
-            padding: 0 0 0 32px;
-            max-width: 420px;
-
-              @include mq($mq-s) {
-                padding: 0 0 0 16px;
-            }
-            @include mq($mq-xs) {
-                padding: 0 0 16px 0;
-                text-align: right;
-            }
-        }
-    }
-
-    div.pr5 {
-        flex-direction: column-reverse;
-        margin-bottom: -64px;
-
-        @include mq($mq-sm) {
-            margin-bottom: 0;
-        }
-        img {
-            max-width: 1100px;
-
-            @include mq($mq-m) {
-                max-width: 900px;
-              }
-            
-            @include mq(1000px) {
-                max-width: 800px;
-            }
-            @include mq($mq-sm) {
-                transform: translateX(10%);
-            }
-
-            @include mq($mq-s) {
-                max-width: 600px;
-            }
-
-            @include mq($mq-xs) {
-                max-width: 500px;
-            }
-        }
-
-        div.info {
-            padding: 0px 0px 32px 0px;
-            margin-left: -120px;
-
-            @include mq($mq-m) {
-                padding: 0px 0px 24px 0px;
-              }
-            @include mq($mq-sm) {
-                margin: 0;
-              }
-              @include mq-xxl() {
-                margin-left: -96px;
-            }
-        }
-    }
-
-    div.pr6 {
-        flex-direction: column;
-        justify-content: space-between;
-
-        @include mq($mq-sm) {
-            // justify-content: center;
-            // flex-direction: row;
-
-            flex-direction: column-reverse;
-            align-items: center;
-        }
-        @include mq($mq-s) {
-            flex-direction: column-reverse;
-            align-items: flex-end;
-        }
-
-        div.project-img {
-            flex-direction: row;
-            align-items: center;
-            padding: 0 0 64px 0;
-            @include mq-min($mq-sm) {
-                align-items: flex-end;
-            }
-            .stand {
-                max-width: 500px;
-                transition: transform 0.5s ease;
-                padding: 0 64px 0 0;
-
-            
-                @include mq($mq-sm) {
-                    max-width: 225px;
-                    padding: 0 0 64px 48px;
-                }
-            }
-            .stand:hover {
-                @include mq-min($mq-sm) {
-                    transform: scale(1.15);
-                }
-            }
-            .stand-photo {
-                max-width: 600px;
-
-                @include mq(1000px) {
-                    max-width: 500px;
-                }
-                @include mq($mq-sm) {
-                    max-width: 100%;
-                    padding: 0 0 0 48px;
-                }
-            }
-        }
-        
-        div.info {
-            max-width: 420px;
-
-            @include mq($mq-sm) {
-               padding: 0;
-               text-align: right;
-                align-self: flex-end;
-            }
-
-            @include mq($mq-s) {
-                padding: 0 0 16px 0;
-                
-            }
-
-        }
-    }
-
-}
+}   
 
 .zoom {
     transform: scale(1.5);

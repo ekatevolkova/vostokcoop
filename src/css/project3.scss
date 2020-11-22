@@ -58,7 +58,7 @@ div.pr3 {
          
         }
         .png:hover {
-            @include mq-min($mq-sm) {
+            @include mq-min(901px) {
             transform: scale(1.2) translate(10%, 0);
             }
         }

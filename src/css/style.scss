@@ -137,7 +137,7 @@ header nav {
     @include mq-xxl() {
         width: 540vw;
     }
-    background: linear-gradient(180deg, #EAE8E8 0%, #FFFFFF 21.35%);
+    background: linear-gradient(180deg, #E5E3E4 0%, #FFFFFF 18.23%, #FFFFFF 97.4%);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -149,7 +149,7 @@ header nav {
         justify-content: center;
         height: 100%;
         width: 100vw;
-        background: linear-gradient(180deg, #E6E4E5 0%, #FFFFFF 4.17%, #FFFFFF 11.98%, #E8E6E6 22.4%, #F8F8F8 27.6%, #FFFFFF 40.62%, #E8E6E6 51.56%, #F8F8F8 64.58%, #FFFFFF 77.08%, #F9F9F9 84.37%, #ECEBEB 96.87%);
+        background: linear-gradient(180deg, #E6E4E5 0%, #FFFFFF 4.69%, #FFFFFF 98.18%, #E8E6E6 100%);
 
 
       }

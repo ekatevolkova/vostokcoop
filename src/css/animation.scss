@@ -98,7 +98,7 @@ section.animation {
 
     div.tracingpaper {
         width: 190vw;
-        height: 110vh;
+        height: 110vh !important;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;

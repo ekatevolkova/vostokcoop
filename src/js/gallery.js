@@ -42,7 +42,7 @@ ScrollTrigger.matchMedia({
         start: "top 60%",
         scrub: 0.2
       },
-      x: "-80%"
+      x: "-70%"
     })
 
 
@@ -53,7 +53,7 @@ ScrollTrigger.matchMedia({
         start: "top 30%",
         scrub: 0.5
       },
-      x: 200
+      x: "15%"
     })
 
     gsap.to(".scheme", {
@@ -62,13 +62,14 @@ ScrollTrigger.matchMedia({
         start: "top 30%",
         scrub: 0.3
       },
-      y: -400
+      y: "-55%"
     })
 
     gsap.to(".sound", {
       scrollTrigger: {
         trigger: ".sound",
         start: "top 80%",
+        scrub: 0.3
       },
       x: -300
     })

@@ -123,7 +123,15 @@ header nav {
         display: none;
     }
 }
-
+.gray{
+    display: none;
+    @include mq($mq-s) {
+        display: block;
+        background-color: #E5E3E4;
+        width: 100vw;
+        height: 4vw;
+    }
+}
 .scroll {
     animation: fadein 2s 1s both;
 

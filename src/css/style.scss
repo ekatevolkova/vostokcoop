@@ -216,17 +216,7 @@ header nav {
     }
     .w200 {
         width: 200vw;
-        @include mq($mq-sm) {
-            margin-top: -80px;
-            margin-bottom: -80px;
-        }
-        @include mq($mq-s) {
-            margin-bottom: 0px;
-        }
-        @include mq($mq-xs) {
-            margin-top: -64px;
-            padding-bottom: 0;
-        }
+
     }
 
     .w75, .w100, .w125, .w150, .w175, .w200 {
@@ -235,6 +225,7 @@ header nav {
             opacity: 1;
             animation: none;
             padding-top: 0px;
+            height: 100%;
         }
     }
     .intro-frame {

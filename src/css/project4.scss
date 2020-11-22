@@ -1,7 +1,7 @@
 div.pr4 {
     flex-direction: row;
     justify-content: flex-start;
-
+    padding-bottom: 32px;
     @include mq($mq-sm) {
         justify-content: center;
     }

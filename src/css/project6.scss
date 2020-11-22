@@ -1,7 +1,7 @@
 div.pr6 {
     flex-direction: column;
     justify-content: center;
- 
+    padding-bottom: 32px;
     @include mq($mq-sm) {
         flex-direction: column-reverse;
         align-items: center;
@@ -23,7 +23,7 @@ div.pr6 {
         }
 
         .stand {
-            max-width: 500px;
+            max-width: 450px;
             transition: transform 0.5s ease;
             padding: 0 64px 0 0;
 
@@ -39,7 +39,7 @@ div.pr6 {
             }
         }
         .stand-photo {
-            max-width: 600px;
+            max-width: 550px;
             
 
             @include mq(1000px) {

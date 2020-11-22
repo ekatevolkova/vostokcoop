@@ -29,22 +29,20 @@ ScrollTrigger.matchMedia({
     gsap.to(".square", {
       scrollTrigger: {
         trigger: ".square",
-        start: "top 90%",
+        start: "top 60%",
         scrub: 0.5
       },
-      x: "25%",
-      ease: "none"
+      x: "25%"
 
     })
 
     gsap.to(".monument", {
       scrollTrigger: {
         trigger: ".monument",
-        start: "top 90%",
-        scrub: 0.5
+        start: "top 60%",
+        scrub: 0.2
       },
-      x: "-100vw",
-      ease: "none"
+      x: "-80%"
     })
 
 
@@ -52,32 +50,27 @@ ScrollTrigger.matchMedia({
     gsap.to(".nepal", {
       scrollTrigger: {
         trigger: ".nepal",
-        start: "top 90%",
+        start: "top 30%",
         scrub: 0.5
       },
-      x: "15%",
-      ease: "none"
+      x: 200
     })
 
     gsap.to(".scheme", {
       scrollTrigger: {
         trigger: ".scheme",
         start: "top 30%",
-        scrub: 0.5
+        scrub: 0.3
       },
-      x: "-200%",
-      y: "-50%",
-      ease: "none"
+      y: -400
     })
 
     gsap.to(".sound", {
       scrollTrigger: {
         trigger: ".sound",
         start: "top 80%",
-        scrub: 0.5
       },
-      x: "-50%",
-      ease: "none"
+      x: -300
     })
 
     gsap.to(".stand", {
@@ -86,7 +79,6 @@ ScrollTrigger.matchMedia({
         start: "top 80%",
         scrub: 0.5
       },
-      ease: "none",
       scale: 1.5
     })
 
@@ -95,23 +87,23 @@ ScrollTrigger.matchMedia({
 })
 
 
-  ScrollTrigger.matchMedia({
+  // ScrollTrigger.matchMedia({
 
-    "(max-width: 600px)": function () {
+  //   "(max-width: 600px)": function () {
 
-      gsap.to(".scheme", {
-        scrollTrigger: {
-          trigger: ".scheme",
-          start: "top 30%",
-          scrub: 0.5
-        },
-        x: "-150%",
-        y: "-50%",
-        ease: "none"
-      })
+  //     gsap.to(".scheme", {
+  //       scrollTrigger: {
+  //         trigger: ".scheme",
+  //         start: 'top top+=100',
+  //         markers: true,
+  //         scrub: 0.5
+  //       },
+  //       y: -600
+  //     })
 
-    }
-  })
+  //   }
+  // })
+
 // gsap.utils.toArray('.frame').forEach(frame=> {
 //   ScrollTrigger.create({
 //       trigger: frame,

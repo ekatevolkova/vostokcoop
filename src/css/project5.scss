@@ -1,6 +1,6 @@
 div.pr5 {
     flex-direction: column-reverse;
-    margin-bottom: -64px;
+    
 
     @include mq($mq-sm) {
         margin-bottom: 0;

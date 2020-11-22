@@ -6,6 +6,7 @@ div.pr3 {
     @include mq($mq-sm) {
         flex-direction: column-reverse;
         align-items: flex-start;
+        // padding-top: 64px;
     }
     
     div.project-img {
@@ -17,9 +18,9 @@ div.pr3 {
         .nepal {
             max-width: 1000px;
             
-            @include mq(1000px) {
+            @media (max-width: 1000px) and (min-width: 900px) {
                 max-width: 800px;
-                transform: translateX(0%);
+                transform: translateX(0%) !important;
             }
 
             @include mq($mq-sm) {
@@ -49,11 +50,14 @@ div.pr3 {
 
             @include mq($mq-sm) {
                 padding: 0;
-                transform: translateX(-200%);
+                // transform: translateX(-200%);
+                position: absolute;
+                right: 64px;
+                z-index: 5;
             }
             @include mq($mq-s) {
-                max-width: 140px;
-                transform: translateX(-150%);
+                max-width: 120px;
+                // transform: translateX(-150%);
             }
          
         }
@@ -74,10 +78,10 @@ div.pr3 {
             
             padding: 0 0 32px 0;
             margin:0;
-            transform: translateY(75%);
+            // transform: translateY(75%);
         }
         @include mq($mq-s) {
-            transform: translateY(40%);
+            // transform: translateY(40%);
         }
 
         .png.plan {

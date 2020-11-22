@@ -123,15 +123,7 @@ header nav {
         display: none;
     }
 }
-.gray{
-    display: none;
-    @include mq($mq-s) {
-        display: block;
-        background-color: #E5E3E4;
-        width: 100vw;
-        height: 4vw;
-    }
-}
+
 .scroll {
     animation: fadein 2s 1s both;
 
@@ -141,11 +133,12 @@ header nav {
     left: 0;
     
     width: 720vw;
+    background: linear-gradient(180deg, #E6E4E5 0%, #FFFFFF 18.23%, #FFFFFF 97.4%);
 
     @include mq-xxl() {
         width: 540vw;
     }
-    background: linear-gradient(180deg, #E5E3E4 0%, #FFFFFF 18.23%, #FFFFFF 97.4%);
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -153,12 +146,11 @@ header nav {
     
     @include mq($mq-sm) {
         flex-direction: column;
-        position: static;
         justify-content: center;
         height: 100%;
         width: 100vw;
         background: linear-gradient(180deg, #E6E4E5 0%, #FFFFFF 4.69%, #FFFFFF 98.18%, #E8E6E6 100%);
-
+        margin-top: -10px;
 
       }
     

@@ -98,7 +98,7 @@ section.animation {
 
     div.tracingpaper {
         width: 190vw;
-        height: 105vh;
+        height: 110vh;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -109,7 +109,6 @@ section.animation {
         div.gray1, div.gray2 {
             height: 100%;
             background-color: #FBFAFA;
-            // opacity: 0.75;
             background: linear-gradient(1.81deg, #E5E3E4 1.03%, rgba(228, 227, 227, 0.7) 32.34%, rgba(235, 234, 234, 0.97) 53.55%, rgba(248, 247, 247, 0.7) 76.78%, rgba(244, 244, 244, 0.88871) 95.98%);
 
         }

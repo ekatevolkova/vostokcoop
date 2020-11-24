@@ -27,11 +27,13 @@ div.pr1 {
                 max-width: 500px;
                 transform: translateX(-5%);
               }
-            // @include mq($mq-xs) {
-            //     margin-right: 32px;
-            //     max-width: 350px;
-            //     transform: translateX(0);
-            //   }
+
+            @include mq-height(650px) {
+                
+                    max-height: 200px !important;
+                
+            }
+            
 
         }
         .png {
@@ -48,6 +50,11 @@ div.pr1 {
             @include mq($mq-xs) {
                 max-width: 300px;
               }
+            @include mq-height(650px) {
+                
+                max-height: 100px !important;
+            
+            }
         }
         .png:hover {
             @include mq-min($mq-m) {
@@ -62,6 +69,11 @@ div.pr1 {
 
         @include mq($mq-sm) {
             padding: 0 0 32px 0;
+        }
+        @include mq-height(650px) {
+                
+            padding: 0 0 0 16px;
+        
         }
     }
 }

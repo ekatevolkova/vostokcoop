@@ -1,9 +1,15 @@
-$mq-xxl: 1600px;
+$mq-xxl: 1450px;
 $mq-xl: 1300px;
 $mq-m: 1150px;
 $mq-sm: 900px;
 $mq-s: 600px;
 $mq-xs: 400px;
+
+@mixin mq-between($width, $width2) {
+    @media (min-width: $width) and (max-width: $width2) {
+        @content;
+    }
+}
 
 @mixin mq-min($width) {
     @media (min-width: $width) {
@@ -15,6 +21,11 @@ $mq-xs: 400px;
         @content;
     }
 }
+@mixin mqh($width, $height) {
+    @media (max-width: $width), (max-height: $height) {
+        @content;
+    }
+}
 @mixin mq-xl() {
     @media (min-width: $mq-xl) {
         @content;
@@ -22,11 +33,15 @@ $mq-xs: 400px;
 }
 
 @mixin mq-xxl() {
-    @media (min-width: $mq-xl) {
+    @media (min-width: $mq-xxl) {
         @content;
     }
 }
-
+@mixin mq-height($height) {
+    @media (max-height: $height) {
+        @content;
+    }
+}
 @keyframes fadein {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -72,7 +87,17 @@ header {
     left: 0px;
     height: 80px;
     width: 100vw;
+
+    @include mq-height(650px) {
+        padding: 28px;
+    }
+    @include mq-height(450px) {
+        padding: 21px;
+    }
+
     padding: 48px 32px;
+
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,8 +109,8 @@ header {
    @include mq($mq-sm) {
     padding:16px;
     
-background: linear-gradient(180deg, #FFFFFF 0%, #F3F2F2 38.02%, rgba(245, 244, 244, 0.865546) 78.65%, rgba(255, 255, 255, 0) 100%);
-}
+    background: linear-gradient(180deg, #FFFFFF 0%, #F3F2F2 38.02%, rgba(245, 244, 244, 0.865546) 78.65%, rgba(255, 255, 255, 0) 100%);
+    }
 
 }
 header.hidden {
@@ -132,17 +157,28 @@ header nav {
     top: 0;
     left: 0;
     
-    width: 720vw;
     background: linear-gradient(180deg, #E6E4E5 0%, #FFFFFF 18.23%, #FFFFFF 97.4%);
-
-    @include mq-xxl() {
-        width: 540vw;
-    }
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    
+    @include mq-between(900px, 1149px) {
+        width: 755vw;
+    }
+    @include mq-between(1150px, 1299px) {
+        width: 710vw;
+    }
+    @include mq-between(1300px, 1450px) {
+        width: 685vw;
+    }
+    @include mq-xl() {
+        width: 625vw;
+    }
+    @include mq-height(450px) {
+        width: 785vw;
+    }
     
     @include mq($mq-sm) {
         flex-direction: column;
@@ -168,13 +204,20 @@ header nav {
            display:none;
           }
     }
- 
+   
     .frame {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         padding-top: 96px;
+
+        @include mq-height(650px) {
+            padding-top: 70px;
+        }
+        @include mq-height(450px) {
+            padding-top: 50px;
+        }
         flex-wrap: nowrap;
         opacity: 0;
         
@@ -198,28 +241,63 @@ header nav {
     .intro-frame, .w75 {
         width: 75vw;
     }
+    .w75 {
+        @include mq-xxl() {
+            width: 65vw;
+        }
+    }
+    .intro-frame {
+        @include mq-xl() {
+            width: 60vw;
+        }
+    }
+    .w115 {
+        width: 105vw;
+
+        @include mq-xl() {
+            width: 85vw;
+        }
+        @include mq-height(450px) {
+            width: 85vw;
+        }
+    }
     .w125 {
         width: 125vw;
 
+        @include mq-between(1150px, 1300px) {
+            width: 110vw;
+        }
+
+        @include mq-xl() {
+            width: 105vw;
+        }
+        @include mq-height(450px) {
+            width: 75vw;
+        }
+
+    }
+    .w100 {
+        width: 100vw;
     }
     .w150 {
         width: 150vw;
     }
+   
     .w175 {
         width: 175vw;
 
-        @include mq-xl() {
-            width: 190vw;
+        @include mq-between(1150px, 1299px) {
+            width: 160vw;
         }
-
-       
+        @include mq-xl() {
+            width: 140vw;
+        }
+        @include mq-height(450px) {
+            width: 100vw;
+        }
     }
-    .w200 {
-        width: 200vw;
 
-    }
-
-    .w75, .w100, .w125, .w150, .w175, .w200 {
+    .w75, .w100, .w115, .w125, .w150, .w175, .w200 {
         @include mq($mq-sm) {
             width: 100vw;
             opacity: 1;
@@ -238,9 +316,8 @@ header nav {
             @include mq(1000px) {
                 padding: 0 0px 0 100px;
             }
-            div.intro-img { 
-                display: none;
-            }
+            
+            
 
             @include mq($mq-sm) {
                     width: 100vw;
@@ -277,7 +354,29 @@ header nav {
             flex-direction: column;
         }
         @include mq($mq-sm) {
-        width: 100%;
+        width: 100vw;
+        }
+        @include mq-height(650px) {
+            padding: 0;
+            margin: 0;
+        }
+        div.project-img {
+            @include mq-height(650px) {
+                img {
+                    max-height: 400px;
+                }
+            }
+            @include mq-height(450px) {
+                img {
+                    max-height: 250px;
+                }
+            }
+            @include mq-height(300px) {
+                img {
+                    max-height: 150px;
+                }
+            }
+        
         }
     }
 

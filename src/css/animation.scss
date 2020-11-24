@@ -23,7 +23,7 @@ section.animation {
    
     div.letters {
         top: 80px;
-        z-index: 3;
+        z-index: 155;
         display: flex;
         overflow: hidden;
         flex-direction: column;
@@ -32,11 +32,16 @@ section.animation {
         @include mq($mq-sm) { 
             padding: 0;
         }
-
+        @include mq-height(650px) {
+            padding: 0;
+        }
         div.line1, div.line2, div.line3, div.line4, div.line5, div.line6 {
             display: flex;
             flex-wrap: nowrap;
             max-height: 20%;
+            @include mq-height(650px) {
+                max-height: 50%;
+            }
             @include mq($mq-s) {
                 max-height: 25%;
             }
@@ -48,6 +53,9 @@ section.animation {
                     min-width: 90vh;
                 }
                 
+                @include mq-height(650px) {
+                    min-width: 200vh;
+                }
             }
             span img {
                 width: 100%;
@@ -127,16 +135,7 @@ section.animation {
         }
     }
     
-    // div.shadow {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 50vw;
-    //     width: 2vw;
-    //     height: 100vh;
-    //     color: yellow;
-    //     z-index: 150;
-        
-    // }
+    
+
+
 }
-
-

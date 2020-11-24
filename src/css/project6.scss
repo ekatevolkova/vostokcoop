@@ -17,17 +17,22 @@ div.pr6 {
         padding: 0 0 64px 0;
         align-items: center;
        
-
+        @include mq-height(450px) {
+            padding: 0 0 16px 0;
+        }
         @include mq($mq-sm) {
             align-items: flex-end;
         }
-
+        
         .stand {
             max-width: 450px;
             transition: transform 0.5s ease;
             padding: 0 64px 0 0;
 
-        
+            @include mq-height(650px) {
+                max-height: 250px !important;
+            }
+            
             @include mq($mq-sm) {
                 max-width: 225px;
                 padding: 0 0 64px 48px;
@@ -49,6 +54,9 @@ div.pr6 {
             @include mq($mq-sm) {
                 max-width: 100%;
                 padding: 0 0 0 48px;
+            }
+            @include mq-height(650px) {
+                max-height: 250px !important;
             }
         }
     }

@@ -6,7 +6,7 @@ div.pr3 {
     @include mq($mq-sm) {
         flex-direction: column-reverse;
         align-items: flex-start;
-        // padding-top: 64px;
+
     }
     
     div.project-img {
@@ -33,15 +33,19 @@ div.pr3 {
                 max-width: 550px;
             }
 
-            // @include mq($mq-xs) {
-            //     transform: translateX(-35%);
-            //     max-width: 450px;
-            // }
         }
 
         .png {
             max-width: 250px;
             padding: 0 0 0 64px;
+
+            @include mq-min(1100px) {
+                padding: 0 0 0 96px;
+            }
+
+            @include mq-min(1200px) {
+                padding: 0 0 0 120px;
+            }
 
             @include mq(1000px) {
                 max-width: 200px;
@@ -73,6 +77,14 @@ div.pr3 {
         display: flex;
         height: 100%;
         padding: 0 64px 0 0;
+
+        @include mq-min(1100px) {
+            padding: 0 96px 0 0;
+    }
+
+        @include mq-min(1200px) {
+                padding: 0 120px 0 0;
+        }
 
         @include mq($mq-sm) {
             

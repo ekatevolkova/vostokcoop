@@ -14,9 +14,7 @@ div.pr4 {
         img {
             max-width: 500px;
 
-            @include mq-xl() {
-                max-width: 600px;
-            }
+          
             @include mq($mq-sm) {
                 max-width: 480px;
             }

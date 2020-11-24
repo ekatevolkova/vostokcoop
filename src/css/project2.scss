@@ -35,5 +35,11 @@ div.pr2 {
         margin-left: 0;
         text-align: right;
         }
+
+        @include mq-height(650px) {
+                
+            padding: 0 0 16px 0;
+        
+        }
     }
 }

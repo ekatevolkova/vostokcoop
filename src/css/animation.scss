@@ -41,6 +41,7 @@ section.animation {
             max-height: 20%;
             @include mq-height(650px) {
                 max-height: 50%;
+
             }
             @include mq($mq-s) {
                 max-height: 25%;
@@ -78,6 +79,13 @@ section.animation {
             }
         }
     }
+
+        @include mq-height(650px) {
+            div.line3, div.line4, div.line5, div.line6 {
+                display: none !important;
+            }
+            
+        }
     div.back-image {
         background: #FFFFFF;
         background: url(img/back2.jpg);

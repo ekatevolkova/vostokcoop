@@ -29,14 +29,14 @@ div.pr3 {
             }
 
             @include mq($mq-s) {
-                transform: translateX(-22%);
-                max-width: 500px;
+                transform: translateX(-45%);
+                max-width: 550px;
             }
 
-            @include mq($mq-xs) {
-                transform: translateX(-35%);
-                max-width: 400px;
-            }
+            // @include mq($mq-xs) {
+            //     transform: translateX(-35%);
+            //     max-width: 450px;
+            // }
         }
 
         .png {

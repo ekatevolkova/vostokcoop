@@ -27,11 +27,11 @@ div.pr1 {
                 max-width: 500px;
                 transform: translateX(-5%);
               }
-            @include mq($mq-xs) {
-                margin-right: 32px;
-                max-width: 350px;
-                transform: translateX(0);
-              }
+            // @include mq($mq-xs) {
+            //     margin-right: 32px;
+            //     max-width: 350px;
+            //     transform: translateX(0);
+            //   }
 
         }
         .png {

@@ -29,20 +29,20 @@ ScrollTrigger.matchMedia({
     gsap.to(".square", {
       scrollTrigger: {
         trigger: ".square",
-        start: "top 60%",
-        scrub: 0.5
+        start: "top 85%",
+        scrub: true
       },
-      x: "25%"
+      x: "40%"
 
     })
 
     gsap.to(".monument", {
       scrollTrigger: {
         trigger: ".monument",
-        start: "top 60%",
-        scrub: 0.2
+        start: "top 85%",
+        scrub: true
       },
-      x: "-70%"
+      x: "-90%"
     })
 
 
@@ -50,8 +50,8 @@ ScrollTrigger.matchMedia({
     gsap.to(".nepal", {
       scrollTrigger: {
         trigger: ".nepal",
-        start: "top 30%",
-        scrub: 0.5
+        start: "top 60%",
+        scrub: true
       },
       x: "15%"
     })
@@ -59,19 +59,20 @@ ScrollTrigger.matchMedia({
     gsap.to(".scheme", {
       scrollTrigger: {
         trigger: ".scheme",
-        start: "top 30%",
-        scrub: 0.3
+        start: "top 60%",
+        scrub: true
       },
-      y: "-55%"
+      y: "-55%",
+      opacity: 0.5
     })
 
     gsap.to(".sound", {
       scrollTrigger: {
         trigger: ".sound",
         start: "top 80%",
-        scrub: 0.3
+        scrub: true
       },
-      x: -300
+      x: "-35%"
     })
 
     gsap.to(".stand", {

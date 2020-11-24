@@ -252,7 +252,9 @@ header nav {
             @include mq($mq-s) {
                     padding: 80px 32px;
             }    
-            
+            @include mq($mq-xs) {
+                padding: 80px 16px;
+        }   
 
             .intro {
         
